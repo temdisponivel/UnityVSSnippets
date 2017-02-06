@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Unity Debug</Title>
+			<Shortcut>deb</Shortcut>
+			<Description>Code snippet for Unity Debug</Description>
+			<Author>Temdisponivel</Author>
+			<SnippetType>Expansion</SnippetType>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Object>
+                    <ID>Context</ID>
+                    <Type>UnityEngine.Object</Type>
+                    <ToolTip>Context object.</ToolTip>
+                    <Default>this</Default>
+                </Object>
+				<Object>
+                    <ID>Message</ID>
+                    <Type>System.String</Type>
+                    <ToolTip>Debug message.</ToolTip>
+                    <Default>Debug message</Default>
+                </Object>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+					#if UNITY_EDITOR
+						Debug.Log("$Message$", $Context$);
+					#endif
+				]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
